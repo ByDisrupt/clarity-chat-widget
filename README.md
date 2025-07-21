@@ -1,1 +1,1 @@
-# clarity-chat-widget
+# clarity-chat
