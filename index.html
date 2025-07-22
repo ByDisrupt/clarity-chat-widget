@@ -586,12 +586,20 @@
         padding: 16px;
       }
     }
+
+    .avatar-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+   
   </style>
 </head>
 <body>
   <!-- Message Bubble -->
   <div id="message-bubble" class="message-bubble">
-    👋 Hey! Can I help you?
+    👋 Hi! I’m Greetie — your assistant for all things Clarity. Ask me anything about how it works, what it can do, or how to get started.
   </div>
 
   <!-- Chat Bubble -->
@@ -603,7 +611,9 @@
   <!-- Chat Container -->
   <div id="chat-container" class="chat-container hidden">
     <div class="chat-header" id="chat-header" role="button" tabindex="0" aria-label="Close chat">
-      <div class="robot-avatar">🤖</div>
+      <div class="robot-avatar">
+        <img src="Greetie-Avatar.png" alt="Greetie Avatar" class="avatar-image" />
+      </div>
       <div class="chat-title">
         <h3>Greetie</h3>
         <p>
@@ -789,7 +799,7 @@
       const id = 'typing-' + Date.now();
       typingDiv.id = id;
       typingDiv.className = "typing-indicator";
-      typingDiv.innerHTML = `<span>Greetie is thinking</span><div class="typing-dots"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
+      typingDiv.innerHTML = `<span>✨ Just a moment — I’m working on that!</span><div class="typing-dots"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
       chatMessages.appendChild(typingDiv);
       chatMessages.scrollTop = chatMessages.scrollHeight;
       return id;
